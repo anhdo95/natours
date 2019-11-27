@@ -45,3 +45,29 @@ body {
 .header__logo {
   height: 35px;
 }
+
+.header__text-box {
+  position: absolute;
+  top: 37.5vh; /* a half of the cutted header background */
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__primary-heading {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__primary-heading-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 32px;
+}
+
+.header__primary-heading-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 16.7px;
+}
