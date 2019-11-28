@@ -67,14 +67,14 @@ body {
   text-align: center;
 }
 
-.header__primary-heading {
+.primary-heading {
   color: #fff;
   text-transform: uppercase;
 
   backface-visibility: hidden;
 }
 
-.header__primary-heading-main {
+.primary-heading--main {
   display: block;
   font-size: 60px;
   font-weight: 400;
@@ -83,7 +83,7 @@ body {
   animation: moveInLeft 1s ease-in;
 }
 
-.header__primary-heading-sub {
+.primary-heading--sub {
   display: block;
   margin-bottom: 48px;
   font-size: 20px;
@@ -93,47 +93,60 @@ body {
   animation: moveInRight 1s ease-in;
 }
 
-.header__link,
-.header__link:visited,
-.header__link:link {
+.btn,
+.btn:visited,
+.btn:link {
   position: relative;
   display: inline-block;
   padding: 12px 36px;
   text-transform: uppercase;
-  background-color: #fff;
-  border-radius: 100px;
-
-  transition: transform .2s ease-in;
-  animation: moveInBottom .5s ease-out .75s;
-  /* hide the appearance at the begining by applying the first keyframe style values */
-  animation-fill-mode: backwards;
 }
 
-.header__link:active {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
-}
-
-.header__link:hover {
+.btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
 }
 
-.header__link:hover::after {
+.btn:hover::after {
   transform: scale(1.5);
   opacity: 0;
 }
 
-.header__link::after {
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn::after {
   position: absolute;
   content: '';
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
 
+.btn--white {
   background-color: #fff;
+}
+
+.btn--white::after {
+  background-color: #fff;
+}
+
+.btn--rounded,
+.btn--rounded::after {
   border-radius: 100px;
+}
+
+.btn--animated {
+  transition: transform .2s ease-in;
+  animation: moveInBottom .5s ease-out .75s;
+  /* hide the appearance at the begining by applying the first keyframe style values */
+  animation-fill-mode: backwards;
+}
+
+.btn--animated::after {
   transition: opacity .3s ease-in-out, transform .3s ease-in-out;
   z-index: -1;
 }
