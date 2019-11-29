@@ -112,11 +112,11 @@ body {
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba($color-black, .2);
-  }
-  
-  &:hover::after {
-    transform: scale(1.5);
-    opacity: 0;
+
+    &::after {
+      transform: scale(1.5);
+      opacity: 0;
+    }
   }
   
   &:active {
@@ -135,10 +135,10 @@ body {
   
   &--white {
     background-color: $color-white;
-  }
-  
-  &--white::after {
-    background-color: $color-white;
+
+    &::after {
+      background-color: $color-white;
+    }
   }
   
   &--rounded,
@@ -151,11 +151,11 @@ body {
     animation: moveInBottom .5s ease-out .75s;
     /* hide the appearance at the begining by applying the first keyframe style values */
     animation-fill-mode: backwards;
-  }
-  
-  &--animated::after {
-    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
-    z-index: -1;
+
+    &::after {
+      transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+      z-index: -1;
+    }
   }
 }
 
