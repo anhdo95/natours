@@ -37,3 +37,23 @@ a {
     letter-spacing: 1.67rem;
   }
 }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  transition: transform .2s ease;
+
+  &:hover {
+    transform: skew(20deg, 2deg) scale(1.1);
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+}
