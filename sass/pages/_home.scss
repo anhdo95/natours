@@ -3,3 +3,29 @@
   margin-top: -20vh;
   padding: 20rem 0;
 }
+
+.section-features {
+  position: relative;
+  height: 95vh;
+  margin-top: -20vh;
+  padding: 25rem 0;
+
+  background-image: linear-gradient(
+    to top right,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+  url(../img/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  &__container {
+    position: absolute;
+    top: 37.5vh; /* a half of the cutted section background */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 100%;
+  }
+}
