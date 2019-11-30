@@ -21,3 +21,8 @@ $font-size-default: 1.6rem;
 // GRID
 $grid-width: 114rem;
 $grid-gutter: 2rem;
+
+// BOX SHADOW
+$box-shadow-primary: 0 1rem 2rem rgba($color-black, .2);
+$box-shadow-secondary: 0 1.5rem 4rem rgba($color-black, .15);
+$box-shadow-tertiary: 0 .5rem 1rem rgba($color-black, .2);
