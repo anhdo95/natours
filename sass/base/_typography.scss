@@ -7,7 +7,7 @@ body {
 }
 
 a {
-  font-size: 1.6rem;
+  font-size: $font-size-default;
   text-decoration: none;
   color: $color-gray-dark;
 }
@@ -59,12 +59,12 @@ a {
 }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: $font-size-default;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .paragraph {
-  font-size: 1.6rem;
+  font-size: $font-size-default;
   margin-bottom: 3rem;
 }
