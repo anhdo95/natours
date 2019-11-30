@@ -1,10 +1,19 @@
 .btn {
+  padding: .6rem 1.5rem;
+  
   &:visited,
   &:link {
     position: relative;
     display: inline-block;
+    transition: all .2s ease;
+  }
+
+  &--xs {
+    padding: .2rem .6rem;
+  }
+
+  &--lg {
     padding: 1.2rem 3.6rem;
-    text-transform: uppercase;
   }
   
   &:hover {
@@ -30,6 +39,16 @@
     bottom: 0;
     left: 0;
   }
+
+  &--text {
+    color: $color-primary;
+    border-bottom: 1px solid $color-primary-dark;
+
+    &:hover {
+      background-color: $color-primary;
+      color: $color-white;
+    }
+  }
   
   &--white {
     background-color: $color-white;
@@ -47,7 +66,6 @@
   &--animated {
     @include animateInDirection(bottom, .5s, ease-out, .75s);
 
-    transition: transform .2s ease-in;
     /* hide the appearance at the begining by applying the first keyframe style values */
     animation-fill-mode: backwards;
 

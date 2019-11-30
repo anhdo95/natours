@@ -1,9 +1,18 @@
+// TRANSFORM
+.text-uppercase {
+  text-transform: uppercase;
+}
+
 // ALIGN
 .text-center {
   text-align: center;
 }
 
 // MARGIN
+.mb-0 {
+  margin-bottom: 0;
+}
+
 .mb-sm {
   margin-bottom: 1.5rem;
 }
