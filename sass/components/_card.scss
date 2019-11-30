@@ -49,4 +49,20 @@ $gradient-colors: (
       transform: rotateY(-180deg);
     }
   }
+
+  // FRONT STYLES
+  &__picture {
+    height: 23rem;
+    background-size: cover;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &--1 {
+      background-image: linear-gradient(
+        to top right,
+        rgba($color-secondary-light, 0.8),
+        rgba($color-secondary-dark, 0.8)),
+      url(../img/nat-5.jpg);
+    }
+  }
 }
