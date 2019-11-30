@@ -1,0 +1,19 @@
+.row {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+
+  [class^='col-'] {
+    float: left;
+    background: $color-gray-dark;
+    color: $color-white;
+  }
+
+  @for $i from 1 through 12 {
+    .col-#{$i} {  
+      width: percentage($i / 12)
+    }
+  }
+}
