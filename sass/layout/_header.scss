@@ -13,14 +13,14 @@
   
   &__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
   }
 
   &__logo {
     @include animateInDirection(right);
 
-    height: 35px;
+    height: 3.5rem;
   }
 
   &__text-box {

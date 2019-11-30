@@ -1,13 +1,13 @@
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 100%;
   line-height: 1.7;
   color: $color-gray-dark;
-  padding: 30px;
+  padding: 3rem;
 }
 
 a {
+  font-size: 1.6rem;
   text-decoration: none;
   color: $color-gray-dark;
 }
@@ -22,18 +22,18 @@ a {
     @include animateInDirection(left);
 
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 32px;
+    letter-spacing: 3.2rem;
   }
   
   &--sub {
     @include animateInDirection(right);
 
     display: block;
-    margin-bottom: 48px;
-    font-size: 20px;
+    margin-bottom: 4.8rem;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 16.7px;
+    letter-spacing: 1.67rem;
   }
 }

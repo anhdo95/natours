@@ -3,13 +3,13 @@
   &:link {
     position: relative;
     display: inline-block;
-    padding: 12px 36px;
+    padding: 1.2rem 3.6rem;
     text-transform: uppercase;
   }
   
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba($color-black, .2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
     &::after {
       transform: scale(1.5);
@@ -18,8 +18,8 @@
   }
   
   &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba($color-black, .2);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .2);
   }
   
   &::after {
@@ -41,7 +41,7 @@
   
   &--rounded,
   &--rounded::after {
-    border-radius: 100px;
+    border-radius: 10rem;
   }
   
   &--animated {

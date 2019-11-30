@@ -1,10 +1,10 @@
 @mixin animateInDirection($direction, $duration: 1s, $ease: ease-in, $delay: 0s) {
   animation: moveIn#{$direction} $duration $ease $delay;
 
-  $topDirection: (0: translateY(-100px), 80: translateY(10px), 100: translateY(0));
-  $leftDirection: (0: translateX(-100px), 80: translateX(10px), 100: translateX(0));
-  $rightDirection: (0: translateX(100px), 80: translateX(-10px), 100: translateX(0));
-  $bottomDirection: (0: translateY(100px), 80: translateY(-10px), 100: translateY(0));
+  $topDirection: (0: translateY(-10rem), 80: translateY(1rem), 100: translateY(0));
+  $leftDirection: (0: translateX(-10rem), 80: translateX(1rem), 100: translateX(0));
+  $rightDirection: (0: translateX(10rem), 80: translateX(-1rem), 100: translateX(0));
+  $bottomDirection: (0: translateY(10rem), 80: translateY(-1rem), 100: translateY(0));
 
   $directions: (
     "left": $leftDirection,
