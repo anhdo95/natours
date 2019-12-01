@@ -43,4 +43,35 @@
     visibility: hidden;
     transform: translateY(-3rem);
   }
+
+  &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    opacity: 1;
+  }
+
+  &__radio-label {
+    font-size: $font-size-default;
+  }
+
+  &__radio-button {
+    position: relative;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    vertical-align: middle;
+    border: .5rem solid $color-primary;
+    border-radius: 50%;
+
+    &::after {
+      @extend .abs-center;
+
+      content: '';
+      width: 1.3rem;
+      height: 1.3rem;
+      opacity: 0;
+      background-color: $color-primary;
+      border-radius: 50%;
+      transition: opacity .3s ease;
+    }
+  }
 }

@@ -1,3 +1,8 @@
+// DISPLAY
+.d-none {
+  display: none;
+}
+
 // TRANSFORM
 .text-uppercase {
   text-transform: uppercase;
@@ -27,6 +32,10 @@
 // MARGIN
 .mt-md {
   margin-top: 3rem;
+}
+
+.mt-lg {
+  margin-top: 5rem;
 }
 
 .mt-lg {
