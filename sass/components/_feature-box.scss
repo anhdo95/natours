@@ -5,7 +5,7 @@
   background-color: rgba($color-white, .8);
   border-radius: 3px;
   box-shadow: $box-shadow-primary;
-  transition: transform 0.3s ease-in;
+  transition: transform .3s ease-in;
 
   &:hover {
     transform: translateY(-1rem) scale(1.05);
@@ -16,8 +16,8 @@
     font-size: 6rem;
 
     background-image: linear-gradient(to right bottom, $color-primary-light 40%, $color-primary-dark);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }

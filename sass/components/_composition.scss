@@ -3,20 +3,20 @@
 
   &__photo {
     position: absolute;
+
+    z-index: 10;
     width: 60%;
     border-radius: 2px;
     outline-offset: 2rem;
-
-    z-index: 10;
-    transition: transform .3s ease;
     box-shadow: $box-shadow-primary;
+    transition: transform .3s ease;
 
     &:hover {
-      outline: 1rem solid $color-primary;
       
       z-index: 20;
-      transform: scale(1.05);
+      outline: 1rem solid $color-primary;
       box-shadow: $box-shadow-secondary;
+      transform: scale(1.05);
     }
 
     &--p1 {

@@ -1,15 +1,15 @@
 body {
-  font-family: 'Lato', sans-serif;
+  padding: 3rem;
+  font-family: Lato, sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: $color-gray-dark;
-  padding: 3rem;
 }
 
 a {
   font-size: $font-size-default;
-  text-decoration: none;
   color: $color-gray-dark;
+  text-decoration: none;
 }
 
 ul {
@@ -52,15 +52,15 @@ ul {
   letter-spacing: .2rem;
 
   background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
   transition: transform .2s ease;
+  -webkit-text-fill-color: transparent;
 
   &:hover {
-    transform: skew(20deg, 2deg) scale(1.1);
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+    transform: skew(20deg, 2deg) scale(1.1);
   }
 }
 
@@ -71,6 +71,6 @@ ul {
 }
 
 .paragraph {
-  font-size: $font-size-default;
   margin-bottom: 3rem;
+  font-size: $font-size-default;
 }

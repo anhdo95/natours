@@ -1,13 +1,14 @@
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(
-    to top right,
-    rgba($color-primary-light, 0.8),
-    rgba($color-primary-dark, 0.8)),
-  url(../img/hero.jpg);
-  background-size: cover;
+  background-image:
+    linear-gradient(
+      to top right,
+      rgba($color-primary-light, .8),
+      rgba($color-primary-dark, .8)
+    ), url(../img/hero.jpg);
   background-position: top;
+  background-size: cover;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   
@@ -27,7 +28,7 @@
     position: absolute;
     top: 37.5vh; /* a half of the cutted header background */
     left: 50%;
-    transform: translate(-50%, -50%);
     text-align: center;
+    transform: translate(-50%, -50%);
   }
 }

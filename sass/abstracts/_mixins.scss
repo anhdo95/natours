@@ -7,9 +7,9 @@
   $bottomDirection: (0: translateY(10rem), 80: translateY(-1rem), 100: translateY(0));
 
   $directions: (
-    "left": $leftDirection,
-    "right": $rightDirection,
-    "bottom": $bottomDirection
+    'left': $leftDirection,
+    'right': $rightDirection,
+    'bottom': $bottomDirection
   );
 
   $currentDirection: map-get($directions, $direction);
