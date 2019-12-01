@@ -67,4 +67,9 @@
     border-radius: $border-radius-default;
     box-shadow: $box-shadow-secondary;
   }
+
+  &__box-inner {
+    width: 50%;
+    padding: 5rem;
+  }
 }
