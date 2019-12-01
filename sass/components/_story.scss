@@ -27,9 +27,9 @@
   }
   
   &__shape:hover &__photo {
-    transform: scale(1);
     -webkit-filter: blur(.2rem) brightness(70%);
     filter: blur(.2rem) brightness(70%);
+    transform: scale(1);
   }
   
   &__shape:hover &__caption {
@@ -40,18 +40,18 @@
   &__photo {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     transform: scale(1.4);
     transition: transform .4s ease-in-out;
+    object-fit: cover;
   }
 
   &__caption {
     @extend .abs-center;
 
     font-size: 1.7rem;
+    color: $color-white;
     text-align: center;
     text-transform: uppercase;
-    color: $color-white;
 
     opacity: 0;
     transform: translate(-50%, 20%);
