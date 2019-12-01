@@ -26,6 +26,7 @@ $gradient-urls: (
   &__side {
     @extend .abs-full;
 
+    overflow: hidden;
     border-radius: 3px;
     box-shadow: $box-shadow-secondary;
     transition: transform .8s ease;
@@ -58,6 +59,8 @@ $gradient-urls: (
     height: 23rem;
     background-size: cover;
     background-blend-mode: screen;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     @for $i from 1 through 3 {
