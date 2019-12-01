@@ -15,7 +15,7 @@
     'color-named': 'never',
     'declaration-block-semicolon-newline-before': 'never-multi-line',
     'declaration-empty-line-before': null,
-    'declaration-no-important': true,
+    'declaration-no-important': null,
     'font-family-name-quotes': 'always-where-recommended',
     'font-weight-notation': [
       'numeric',
@@ -263,7 +263,7 @@
     'selector-max-type': 2,
     'selector-max-universal': 1,
     'selector-no-qualifying-type': true,
-    'selector-no-vendor-prefix': true,
+    'selector-no-vendor-prefix': null,
     'shorthand-property-no-redundant-values': true,
     'string-quotes': 'single',
     'unicode-bom': 'never',
