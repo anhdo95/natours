@@ -7,7 +7,9 @@
     "start": "concurrently \"npm run watch:scss\" \"live-server\"",
     "build": "npm run compile:scss",
     "compile:scss": "node-sass sass/main.scss css/style.css",
-    "watch:scss": "node-sass sass/main.scss css/style.css -w"
+    "watch:scss": "node-sass sass/main.scss css/style.css -w",
+    "lint": "stylelint sass/**/*.scss",
+    "lint:fix": "stylelint --fix sass/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,9 @@
   "homepage": "https://github.com/anhdo95/natours-css#readme",
   "devDependencies": {
     "concurrently": "^5.0.0",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "stylelint": "^12.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "stylelint-order": "^3.1.1"
   }
 }
