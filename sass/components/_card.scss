@@ -4,6 +4,12 @@ $gradient-colors: (
   3: ('start': $color-tertiary-light, 'end': $color-tertiary-dark)
 );
 
+$gradient-urls: (
+  1: '../img/nat-5.jpg',
+  2: '../img/nat-6.jpg',
+  3: '../img/nat-7.jpg'
+);
+
 .card {
   position: relative;
   height: 52rem;
@@ -58,31 +64,18 @@ $gradient-colors: (
     background-blend-mode: screen;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
-    &--1 {
-      background-image:
-        linear-gradient(
-          to top right,
-          $color-secondary-light,
-          $color-secondary-dark
-        ), url(../img/nat-5.jpg);
-    }
-
-    &--2 {
-      background-image:
-        linear-gradient(
-          to top right,
-          $color-primary-light,
-          $color-primary-dark
-        ), url(../img/nat-6.jpg);
-    }
-
-    &--3 {
-      background-image:
-        linear-gradient(
-          to top right,
-          $color-tertiary-light,
-          $color-tertiary-dark
-        ), url(../img/nat-7.jpg);
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        $gradientColor: map-get($gradient-colors, $i);
+        $gradientUrl: map-get($gradient-urls, $i);
+  
+        background-image:
+          linear-gradient(
+            to top right,
+            map-get($gradientColor, 'start'),
+            map-get($gradientColor, 'end')
+          ), url($gradientUrl);
+      }
     }
   }
 
@@ -103,31 +96,17 @@ $gradient-colors: (
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
 
-    &--1 {
-      background-image:
-        linear-gradient(
-          to top right,
-          rgba($color-secondary-light, .85),
-          rgba($color-secondary-dark, .85)
-        );
-    }
-
-    &--2 {
-      background-image:
-        linear-gradient(
-          to top right,
-          rgba($color-primary-light, .85),
-          rgba($color-primary-dark, .85)
-        );
-    }
-
-    &--3 {
-      background-image:
-        linear-gradient(
-          to top right,
-          rgba($color-tertiary-light, .85),
-          rgba($color-tertiary-dark, .85)
-        );
+    @for $i from 1 through 3 {
+      &--#{$i} {
+        $gradientColor: map-get($gradient-colors, $i);
+  
+        background-image:
+          linear-gradient(
+            to top right,
+            rgba(map-get($gradientColor, 'start'), .85)
+            rgba(map-get($gradientColor, 'end'), .85)
+          );
+      }
     }
   }
 
