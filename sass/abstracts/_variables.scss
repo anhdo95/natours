@@ -23,6 +23,7 @@ $font-size-default: 1.6rem;
 $font-size-xs: 1.2rem;
 $font-size-sm: 1.4rem;
 $font-size-md: 2rem;
+$font-size-lg: 3rem;
 $font-size-xl: 6rem;
 
 // GRID
@@ -38,3 +39,8 @@ $box-shadow-lighter: 0 .25rem .5rem rgba($color-black, .1);
 
 // BORDER
 $border-radius-default: 3px;
+
+// Z-INDEX
+$z-index-navigation-bg: 1000;
+$z-index-navigation-nav: 1500;
+$z-index-navigation-button: 2000;
