@@ -6,6 +6,10 @@
   box-shadow: $box-shadow-secondary;
   transform: skewX(-10deg);
 
+  &:not(:last-child) {
+    @extend .mb-xl;
+  }
+
   &__box {
     padding: 6rem 6rem 6rem 9rem;
     transform: skewX(10deg);
