@@ -1,0 +1,31 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  padding: 6rem 6rem 6rem 9rem;
+  background-color: rgba($color-white, .1);
+  border-radius: $border-radius-default;
+  box-shadow: $box-shadow-secondary;
+  transform: skewX(-10deg);
+
+  &__box {
+    transform: skewX(10deg);
+  }
+
+  &__shape {
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+
+    transform: translateX(-3rem);
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
