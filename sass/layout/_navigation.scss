@@ -7,10 +7,10 @@
     width: 6rem;
     height: 6rem;
     text-align: center;
+    cursor: pointer;
     background-color: $color-white;
     border-radius: 50%;
     box-shadow: $box-shadow-primary;
-    cursor: pointer;
   }
 
   &__background {
@@ -90,15 +90,14 @@
       width: 3rem;
       height: 2px;
       background-color: $color-black-1;
-      transition: top       .3s ease,
-                  transform .3s ease;
+      transition: top       .3s ease, transform .3s ease;
     }
 
     &::before,
     &::after {
       position: absolute;
-      content: '';
       left: 0;
+      content: '';
     }
 
     &::before {

@@ -2,25 +2,23 @@
   @extend .abs-full;
 
   position: fixed;
-  visibility: hidden;
-  opacity: 0;
   z-index: $z-index-popup;
+  visibility: hidden;
   background-color: rgba($color-black, .9);
-  transition: visibility .3s ease-in-out,
-              opacity    .3s ease-in-out;
+  opacity: 0;
+  transition: visibility .3s ease-in-out, opacity    .3s ease-in-out;
 
   &__content {
     @extend .abs-center;
 
     width: 80vw;
-    opacity: 0;
     overflow: hidden;
     background-color: $color-white;
     border-radius: $border-radius-default;
     box-shadow: $box-shadow-secondary;
+    opacity: 0;
     transform: translate(-50%, -50%) scale(.1);
-    transition: opacity   .2s ease-in-out .2s,
-                transform .2s ease-in-out .2s;
+    transition: opacity .2s ease-in-out .2s, transform .2s ease-in-out .2s;
   }
   
   &__content-inner {
@@ -39,7 +37,8 @@
     }
   }
   
-  &__left, &__right {
+  &__left,
+  &__right {
     display: table-cell;
   }
 
