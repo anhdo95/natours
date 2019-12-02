@@ -1,0 +1,18 @@
+.popup {
+  @extend .abs-full;
+
+  position: fixed;
+  z-index: $z-index-popup;
+  background-color: rgba($color-black, .9);
+
+  &__content {
+    @extend .abs-center;
+
+    width: 80vw;
+    height: 80vh;
+    overflow: hidden;
+    background-color: $color-white;
+    border-radius: $border-radius-default;
+    box-shadow: $box-shadow-secondary;
+  }
+}
