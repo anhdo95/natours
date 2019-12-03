@@ -40,6 +40,14 @@
 
 .mt-xl {
   margin-top: 8rem;
+
+  @include respond(tab-port) {
+    margin-top: 4rem;
+  }
+
+  @include respond(phone) {
+    margin-top: 2rem;
+  }
 }
 
 .mb-0 {
@@ -60,6 +68,14 @@
 
 .mb-xl {
   margin-bottom: 8rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 4rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 2rem;
+  }
 }
 
 // PADDING
