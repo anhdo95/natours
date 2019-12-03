@@ -11,6 +11,10 @@
   background-size: cover;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(tab-port) {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
   
   &__logo-box {
     position: absolute;
@@ -30,5 +34,9 @@
     left: 50%;
     text-align: center;
     transform: translate(-50%, -50%);
+
+    @include respond(tab-port) {
+      top: 42.5vh;
+    }
   }
 }
