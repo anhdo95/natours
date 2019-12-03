@@ -1,8 +1,8 @@
 .navigation {
   &__button {
     position: fixed;
-    top: 6rem;
-    right: 6rem;
+    top: 5.75rem;
+    right: 7rem;
     z-index: $z-index-navigation-button;
     width: 6rem;
     height: 6rem;
@@ -11,18 +11,28 @@
     background-color: $color-white;
     border-radius: 50%;
     box-shadow: $box-shadow-primary;
+
+    @include respond(tab-port) {
+      top: 2.75rem;
+      right: 4rem;
+    }
   }
 
   &__background {
     position: fixed;
-    top: 6.5rem;
-    right: 6.5rem;
+    top: 6.25rem;
+    right: 7.5rem;
     z-index: $z-index-navigation-bg;
     width: 5rem;
     height: 5rem;
     background-image: radial-gradient($color-primary-light, $color-primary-dark);
     border-radius: 50%;
     transition: transform .8s cubic-bezier(.4, .2, .2, 1.21);
+
+    @include respond(tab-port) {
+      top: 3.25rem;
+      right: 4.5rem;
+    }
   }
 
   &__nav {
@@ -37,6 +47,11 @@
 
   &__list {
     @extend .abs-center;
+
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &__list-item {
