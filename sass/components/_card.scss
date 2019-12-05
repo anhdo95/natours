@@ -102,7 +102,7 @@ $gradient-urls: (
         background-image:
           linear-gradient(
             to top right,
-            rgba(map-get($gradientColor, 'start'), .85)
+            rgba(map-get($gradientColor, 'start'), .85),
             rgba(map-get($gradientColor, 'end'), .85)
           );
       }
