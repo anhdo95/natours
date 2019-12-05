@@ -4,7 +4,7 @@
   background-color: $color-gray-light-1;
 
   @include respond(tab-port) {
-    padding: 15rem 0 25rem;
+    padding: 15rem 0 10rem;
   }
 }
 
@@ -31,7 +31,7 @@
   */
 
   @include respond(tab-port) {
-    padding: 10rem 0;
+    padding: 5rem 0;
   }
 
   &__container {
