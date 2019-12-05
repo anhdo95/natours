@@ -6,11 +6,22 @@
       to top right,
       rgba($color-primary-light, .8),
       rgba($color-primary-dark, .8)
-    ), url(../img/hero.jpg);
+    ), url(../img/hero-small.jpg);
   background-position: top;
   background-size: cover;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  // If the user is 2x screen resolution and match the conditions below
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+         (min-width: 75em) {
+    background-image:
+    linear-gradient(
+      to top right,
+      rgba($color-primary-light, .8),
+      rgba($color-primary-dark, .8)
+    ), url(../img/hero.jpg);
+  }
 
   @include respond(tab-port) {
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
