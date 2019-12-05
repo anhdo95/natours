@@ -1,8 +1,12 @@
 .booking-form {
   &__group:not(:last-child) {
     margin-bottom: 2rem;
-  }
 
+    @include respond(tab-port) {
+      margin-bottom: 1rem;
+    }
+  }
+  
   &__input {
     display: block;
     width: 100%;
@@ -42,6 +46,12 @@
     visibility: hidden;
     opacity: 0;
     transform: translateY(-3rem);
+  }
+
+  &__radio-box {
+    @include respond(tab-port) {
+      padding: 1rem 0 !important;
+    }
   }
 
   &__radio-input:checked ~ &__radio-label &__radio-button::after {
