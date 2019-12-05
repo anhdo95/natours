@@ -12,11 +12,21 @@ $gradient-urls: (
 
 .card {
   position: relative;
-  height: 52rem;
+  min-height: 52rem;
   perspective: 150rem;
+
+  @include respond(tab-port) {
+    background-color: $color-white;
+    border-radius: $border-radius-default;
+    box-shadow: $box-shadow-secondary;
+  }
 
   &:hover &__side--front {
     transform: rotateY(180deg);
+
+    @include respond(tab-port) {
+      transform: none;
+    }
   }
 
   &:hover &__side--back {
@@ -27,10 +37,15 @@ $gradient-urls: (
     @extend .abs-full;
 
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: $border-radius-default;
     box-shadow: $box-shadow-secondary;
     transition: transform .8s ease;
     backface-visibility: hidden;
+
+    @include respond(tab-port) {
+      position: static;
+      box-shadow: none;
+    }
 
     &--front {
       background-color: $color-white;
@@ -38,6 +53,12 @@ $gradient-urls: (
 
     &--back {
       transform: rotateY(-180deg);
+
+      @include respond(tab-port) {
+        transform: none;
+        border-top-right-radius: 0;
+        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+      }
     }
 
     @for $i from 1 through 3 {
@@ -59,8 +80,8 @@ $gradient-urls: (
     height: 23rem;
     background-size: cover;
     background-blend-mode: screen;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
+    border-top-left-radius: $border-radius-default;
+    border-top-right-radius: $border-radius-default;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
     @for $i from 1 through 3 {
@@ -82,7 +103,7 @@ $gradient-urls: (
     position: absolute;
     top: 12rem;
     right: 2rem;
-    width: 75%;
+    width: 60%;
     font-size: 2.8rem;
     font-weight: 300;
     color: $color-white;
@@ -111,6 +132,10 @@ $gradient-urls: (
 
   &__details {
     padding: 3rem;
+
+    @include respond(tab-port) {
+      padding: 1rem 3rem;
+    }
   }
 
   &__detail-item {
@@ -128,9 +153,16 @@ $gradient-urls: (
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 90%;
+    width: 100%;
+    padding: 3rem;
     text-align: center;
     transform: translate(-50%, -50%);
+
+    @include respond(tab-port) {
+      position: static;
+      padding-top: 6rem;
+      transform: none;
+    }
   }
 
   &__price-box {
