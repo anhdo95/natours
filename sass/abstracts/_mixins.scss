@@ -31,6 +31,14 @@
   }
 }
 
+@mixin clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: '';
+  }
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:      Phone

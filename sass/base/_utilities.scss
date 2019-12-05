@@ -60,6 +60,14 @@
 
 .mb-md {
   margin-bottom: 3rem;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .mb-lg {
