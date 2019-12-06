@@ -20,7 +20,8 @@ ul {
 .heading-primary {
   color: $color-white;
   text-transform: uppercase;
-
+  
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
   &--main {
@@ -55,15 +56,18 @@ ul {
   display: inline-block;
   font-size: 3.2rem;
   font-weight: 700;
+  color: $color-primary-light;
   text-transform: uppercase;
   letter-spacing: .2rem;
-
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
-  background-clip: text;
-
   transition: transform .2s ease;
-  -webkit-text-fill-color: transparent;
+
+  @supports (-webkit-background-clip: text) or (background-clip: text) {
+    background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
 
   @include respond(tab-port) {
     font-size: 2.5rem;
