@@ -40,6 +40,7 @@ $gradient-urls: (
     border-radius: $border-radius-default;
     box-shadow: $box-shadow-secondary;
     transition: transform .8s ease;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     @include respond(tab-port) {
@@ -56,8 +57,13 @@ $gradient-urls: (
 
       @include respond(tab-port) {
         transform: none;
+        border-top-left-radius: 0;
         border-top-right-radius: 0;
-        clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+
+        @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+          -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
       }
     }
 
@@ -82,7 +88,11 @@ $gradient-urls: (
     background-blend-mode: screen;
     border-top-left-radius: $border-radius-default;
     border-top-right-radius: $border-radius-default;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    @supports (-webkit-clip-path: polygon(0 0)) or (clip-path: polygon(0 0)) {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
 
     @for $i from 1 through 3 {
       &--#{$i} {
@@ -102,19 +112,27 @@ $gradient-urls: (
   &__heading {
     position: absolute;
     top: 12rem;
-    right: 2rem;
-    width: 60%;
+    right: 0;
+    width: 100%;
     font-size: 2.8rem;
     font-weight: 300;
     color: $color-white;
     text-align: right;
     text-transform: uppercase;
+
+    @supports (-webkit-box-decoration-break: clone) or (box-decoration-break: clone) {
+      right: 2rem;
+      width: 70%;
+    }
   }
 
   &__heading-span {
     padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+
+    @supports (-webkit-box-decoration-break: clone) or (box-decoration-break: clone) {
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
+    }
 
     @for $i from 1 through 3 {
       &--#{$i} {
