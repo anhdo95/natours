@@ -37,19 +37,24 @@
     width: 15rem;
     height: 15rem;
     overflow: hidden;
-    
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    
     transform: translateX(-3rem);
+
+    @supports ((-webkit-clip-path: circle(50% at 50% 50%)) or (clip-path: circle(50% at 50% 50%)))
+          and ((-webkit-shape-outside: circle(50% at 50% 50%)) or (shape-outside: circle(50% at 50% 50%))) {
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+          }
   }
   
   &__shape:hover &__photo {
-    -webkit-filter: blur(.2rem) brightness(70%);
-    filter: blur(.2rem) brightness(70%);
     transform: scale(1);
+
+    @supports (-webkit-filter: blur(0) brightness(0)) or (filter: blur(0) brightness(0)) {
+      -webkit-filter: blur(.2rem) brightness(70%);
+      filter: blur(.2rem) brightness(70%);
+    }
   }
   
   &__shape:hover &__caption {
